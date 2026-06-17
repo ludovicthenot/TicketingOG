@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickets — Ticketing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <strong class="brand">Ticketing</strong>
+      <nav>
+        <ul>
+          <li><a href="tickets.html" aria-current="page">Mes tickets</a></li>
+        </ul>
+      </nav>
+      <button
+        type="button"
+        class="btn-logout"
+        onclick="location.href = 'login.html'"
+      >
+        Déconnexion
+      </button>
+    </header>
+
+    <main class="page">
+      <section class="section-create">
+        <h2>Nouveau ticket</h2>
+        <form action="#" method="POST">
+          <div class="field">
+            <label for="titre">Titre</label>
+            <input
+              type="text"
+              id="titre"
+              name="titre"
+              placeholder="Résumé du problème"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="categorie">Catégorie</label>
+            <select id="categorie" name="categorie" required>
+              <option value="">— Choisir —</option>
+              <option value="materiel">Matériel</option>
+              <option value="logiciel">Logiciel</option>
+              <option value="reseau">Réseau</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="priorite">Priorité</label>
+            <select id="priorite" name="priorite" required>
+              <option value="">— Choisir —</option>
+              <option value="basse">Basse</option>
+              <option value="normale">Normale</option>
+              <option value="haute">Haute</option>
+              <option value="critique">Critique</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="description">Description</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              placeholder="Décrivez le problème en détail…"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">Soumettre le ticket</button>
+        </form>
+      </section>
+
+      <section class="section-list">
+        <h2>Tickets en cours</h2>
+      </section>
+    </main>
+
+    <footer>
+      <p>Ticketing BTS SIO 2026</p>
+    </footer>
+  </body>
+</html>
