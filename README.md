@@ -19,3 +19,22 @@ tickets/
 ```
 
 `config.php` reste hors Git. Le dossier `tickets/` est reserve aux pages `list.php`, `create.php` et `view.php`.
+
+## Installation locale
+
+1. Copier `config.example.php` vers `config.php`.
+2. Renseigner les identifiants MySQL dans `config.php`.
+3. Importer `sql/schema.sql` dans la base `ticketingog`.
+4. Creer le premier admin :
+
+```powershell
+php scripts/create_admin.php --username=admin --email=admin@example.com --password=Password123!
+```
+
+5. Lancer le serveur local :
+
+```powershell
+php -S localhost:8888
+```
+
+L'application sera disponible sur `http://localhost:8888`.
