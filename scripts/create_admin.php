@@ -6,7 +6,7 @@ if (PHP_SAPI !== 'cli') {
     exit("Ce script doit etre lance en CLI.\n");
 }
 
-require_once __DIR__.'/../bootstrap.php';
+require_once __DIR__.'/../app/bootstrap.php';
 
 $options = getopt('', ['username:', 'email:', 'password:']);
 

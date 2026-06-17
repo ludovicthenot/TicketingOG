@@ -7,5 +7,7 @@ Thumbs.db
 /.vscode/
 /config.php
 /uploads/*
-!/uploads/.htaccess
-!/uploads/.gitkeep
+/config/config.php
+/public/uploads/*
+!/public/uploads/.htaccess
+!/public/uploads/.gitkeep

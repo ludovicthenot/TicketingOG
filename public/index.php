@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-require_once __DIR__.'/bootstrap.php';
+require_once __DIR__.'/../app/bootstrap.php';
 
 redirect(current_user() ? '/dashboard.php' : '/login.php');

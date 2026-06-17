@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-define('BASE_PATH', __DIR__);
+define('ROOT_PATH', dirname(__DIR__));
+define('APP_PATH', __DIR__);
 
-$configPath = BASE_PATH.'/config.php';
+$configPath = ROOT_PATH.'/config/config.php';
 if (! is_file($configPath)) {
     http_response_code(500);
-    exit('Configuration manquante. Copier config.example.php vers config.php.');
+    exit('Configuration manquante. Copier config/config.example.php vers config/config.php.');
 }
 
 require_once $configPath;
@@ -37,7 +38,7 @@ if (PHP_SAPI !== 'cli' && ! headers_sent()) {
     header('Referrer-Policy: strict-origin-when-cross-origin');
 }
 
-require_once BASE_PATH.'/db.php';
-require_once BASE_PATH.'/functions.php';
-require_once BASE_PATH.'/queries.php';
-require_once BASE_PATH.'/layout.php';
+require_once APP_PATH.'/db.php';
+require_once APP_PATH.'/functions.php';
+require_once APP_PATH.'/queries.php';
+require_once APP_PATH.'/layout.php';
