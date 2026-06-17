@@ -1,0 +1,11 @@
+*.log
+.DS_Store
+Thumbs.db
+/.codex
+/.cursor/
+/.idea/
+/.vscode/
+/config.php
+/uploads/*
+!/uploads/.htaccess
+!/uploads/.gitkeep
